@@ -34,10 +34,4 @@ def create_generate_answer_node(model: ChatOpenAI):
         response = model.invoke([HumanMessage(content=prompt)])
         return {"messages": [response]}
     
-        # question = trimmed_messages[0].content
-        # context = trimmed_messages[1].content
-        # prompt = GENERATE_PROMPT.format(question=question, context=context)
-        # response = model.invoke([{"role": "user", "content": prompt}])
-        # return {"messages": [response]}
-    
     return generate_answer
